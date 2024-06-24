@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">37C3 Fahrplan</string>
+    <string name="app_name">FOSS4G 2024 Schedule</string>
     <string name="app_hardcoded_subtitle">
         27.-30. Dezember 2023, Congress Center Hamburg
     </string>

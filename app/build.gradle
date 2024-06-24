@@ -19,8 +19,8 @@ android {
     buildToolsVersion = Android.buildToolsVersion
 
     defaultConfig {
-        versionCode 102
-        versionName "1.64.1"
+        versionCode 103
+        versionName "1.64.2"
         minSdk Android.minSdkVersion
         targetSdk Android.targetSdkVersion
         base.archivesName = "Fahrplan-$versionName"
@@ -78,8 +78,6 @@ android {
 
     signingConfigs {
         ccc37c3
-        cccamp2023
-        jev2022
     }
 
     def defaultDimension = "default"
@@ -88,65 +86,18 @@ android {
     productFlavors {
         ccc37c3 {
             dimension defaultDimension
-            applicationId "info.metadude.android.congress.schedule"
-            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.congress.schedule"'
-            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.congress.schedule"'
-            buildConfigField "String", "SCHEDULE_URL", '"https://fahrplan.events.ccc.de/congress/2023/fahrplan/schedule.xml"'
+            applicationId "info.metadude.android.foss42024gbelem.schedule"
+            versionName "${defaultConfig.versionName}-FOSS4G2024Belem-Edition"
+            buildConfigField "String", "GOOGLE_PLAY_URL", '""'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.foss42024gbelem.schedule"'
+            buildConfigField "String", "SCHEDULE_URL", '"https://talks.osgeo.org/foss4g-2024/schedule/export/schedule.xml"'
             buildConfigField "String", "EVENT_URL", '""'
-            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://events.ccc.de/congress/2023/"'
-            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Congressplatz 1, 20355 Hamburg"'
-            buildConfigField "String", "SERVER_BACKEND_TYPE", '"frab"'
-            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
-            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "true"
-            buildConfigField "String", "C3NAV_URL", '"https://37c3.c3nav.de/l/"'
-            buildConfigField "boolean", "ENABLE_ALTERNATIVE_SCHEDULE_URL", "true"
-            buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "true"
-            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
-            resValue("string", "preference_hint_engelsystem_json_export_url", '"https://engel.events.ccc.de/shifts-json-export?key=YOUR_KEY"')
-            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#37c3 #fahrplan"'
-            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+37c3@googlemail.com"'
-            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
-        }
-        cccamp2023 {
-            dimension defaultDimension
-            applicationId "info.metadude.android.cccamp.schedule"
-            versionName "${defaultConfig.versionName}-CCCamp-Edition"
-            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.cccamp.schedule"'
-            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.cccamp.schedule"'
-            buildConfigField "String", "SCHEDULE_URL", '"https://events.ccc.de/camp/2023/hub/api/c/camp23/schedule.xml"'
-            buildConfigField "String", "EVENT_URL", '"http://events.ccc.de/camp/2023/Fahrplan/events/%1$s.html"'
-            buildConfigField "String", "EVENT_WEBSITE_URL", '"http://events.ccc.de/camp/2023/"'
-            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Ziegeleipark Mildenberg, 16792 Zehdenick"'
-            buildConfigField "String", "SERVER_BACKEND_TYPE", '"frab"'
-            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "false"
-            buildConfigField "boolean", "ENGAGE_C3NAV_APP_INSTALLATION", "true"
-            buildConfigField "String", "C3NAV_URL", '"https://camp23.c3nav.de/l/"'
-            buildConfigField "boolean", "ENABLE_ALTERNATIVE_SCHEDULE_URL", "true"
-            buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "true"
-            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
-            resValue("string", "preference_hint_engelsystem_json_export_url", '"https://engelsystem.events.ccc.de/shifts-json-export?key=YOUR_KEY"')
-            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#camp23 #CCCamp23 #fahrplan"'
-            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+camp2023@googlemail.com"'
-            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://frab.cccv.de/en/camp2023/public/events/%s/feedback/new"'
-        }
-        jev2022 {
-            dimension defaultDimension
-            applicationId "info.metadude.android.rc3.schedule"
-            versionName "${defaultConfig.versionName}-JEV-Edition"
-            buildConfigField "String", "GOOGLE_PLAY_URL", '"https://play.google.com/store/apps/details?id=info.metadude.android.rc3.schedule"'
-            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.rc3.schedule"'
-            buildConfigField "String", "SCHEDULE_URL", '"https://data.c3voc.de/jev22/everything.schedule.xml"'
-            buildConfigField "String", "EVENT_URL", '""'
-            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://events.ccc.de/2022/11/28/dezentral-2022/"'
+            buildConfigField "String", "EVENT_WEBSITE_URL", '"https://2024.foss4g.org"'
+            buildConfigField "String", "EVENT_POSTAL_ADDRESS", '"Av. Dr. Freitas, s/n - Marco, Belém - PA, 66613-902"'
             buildConfigField "String", "SERVER_BACKEND_TYPE", '"pretalx"'
-            buildConfigField "boolean", "SHOW_APP_DISCLAIMER", "true"
-            buildConfigField "boolean", "ENABLE_ALTERNATIVE_SCHEDULE_URL", "true"
-            buildConfigField "boolean", "ENABLE_CHAOSFLIX_EXPORT", "true"
-            buildConfigField "boolean", "ENABLE_ENGELSYSTEM_SHIFTS", "true"
-            resValue("string", "preference_hint_engelsystem_json_export_url", '"https://your.engelsystem.de/shifts-json-export?key=YOUR_KEY"')
-            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#jev #fahrplan #hip #fireshonks #xrelog22 #rtc22 @cbase"'
-            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"tobias.preuss+jev@googlemail.com"'
-            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '""'
+            buildConfigField "String", "SOCIAL_MEDIA_HASHTAGS_HANDLES", '"#FOSS4G #FOSS42024"'
+            buildConfigField "String", "TRACE_DROID_EMAIL_ADDRESS", '"smarzaro@gmail.com"'
+            buildConfigField "String", "SCHEDULE_FEEDBACK_URL", '"https://talks.osgeo.org/foss4g-2024/schedule/%s/feedback/"'
         }
     }
 
