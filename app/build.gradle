@@ -77,19 +77,19 @@ android {
     }
 
     signingConfigs {
-        ccc37c3
+        foss4g2024
     }
 
     def defaultDimension = "default"
     flavorDimensions = [defaultDimension]
 
     productFlavors {
-        ccc37c3 {
+        foss4g2024 {
             dimension defaultDimension
-            applicationId "info.metadude.android.foss42024gbelem.schedule"
-            versionName "${defaultConfig.versionName}-FOSS4G2024Belem-Edition"
+            applicationId "info.metadude.android.foss4g2024.schedule"
+            versionName "${defaultConfig.versionName}-FOSS4G2024-Edition"
             buildConfigField "String", "GOOGLE_PLAY_URL", '""'
-            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.foss42024gbelem.schedule"'
+            buildConfigField "String", "F_DROID_URL", '"https://f-droid.org/packages/info.metadude.android.foss4g2024.schedule"'
             buildConfigField "String", "SCHEDULE_URL", '"https://talks.osgeo.org/foss4g-2024/schedule/export/schedule.xml"'
             buildConfigField "String", "EVENT_URL", '""'
             buildConfigField "String", "EVENT_WEBSITE_URL", '"https://2024.foss4g.org"'
